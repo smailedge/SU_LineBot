@@ -18,7 +18,7 @@ cl = LINE("")
 clMID = cl.profile.mid
 profile = cl.getProfile()
 status = str(profile.statusMessage)
-lock = _name = "Capoo βộṱ ℟ǕÑing...\n\nCapoo-ŁĪŃĘβộṱ\n\n✔已運行24høüř\n\n✔βộṱ  ℟ǕÑing...."
+lock = _name = "Yuan βộṱ ℟ǕÑing...\n\nYuan-ŁĪŃĘβộṱ\n\n✔已運行24høüř\n\n✔βộṱ  ℟ǕÑing...."
 if lock not in status:
     profile.statusMessage = lock + status
     cl.updateProfile(profile)
@@ -68,7 +68,7 @@ myProfile["pictureStatus"] = clProfile.pictureStatus
 ####################################################
 
 ####################################################
-admin=['u74ae03c94243a7d57373d156e2068ed7','u74ae03c94243a7d57373d156e2068ed7',clMID]
+admin=['ub6f9d53713c5869f0d78e71febe13837','u4bdce48b9f4488836216d6a2726c03d2',clMID]
 King = "MID"
 ####################################################
 
@@ -266,7 +266,7 @@ def lineBot(op):
             print ("[ 5 ] NOTIFIED ADD CONTACT")
             if settings["autoAdd"] == True:
                 cl.findAndAddContactsByMid(op.param1)
-                cl.sendMessage(op.param1, "安安！{} 感謝您加我為好友！半垢V4.0 Su Bot運行中(๑′ᴗ‵๑)！Çręätør:Capoo".format(str(cl.getContact(op.param1).displayName)))
+                cl.sendMessage(op.param1, "安安！{} 感謝您加我為好友！半垢V4.0 Su Bot運行中(๑′ᴗ‵๑)！Çręätør:Yuan".format(str(cl.getContact(op.param1).displayName)))
         if op.type == 11:
             group = cl.getGroup(op.param1)
             contact = cl.getContact(op.param2)
@@ -312,7 +312,7 @@ def lineBot(op):
                     elen = str(len(text) + len(mention) - 1)
                     arrData = {'S':slen, 'E':elen, 'M':op.param2}
                     arr.append(arrData)
-                    text += mention + "歡迎您加入 {} 小組！".format(str(group.name))
+                    text += mention + "歡迎你加入醬醬的衣櫥🥰\n記事本 #公吿 都有下單結單方式和板規麻煩請先詳閱🧸\n有問題再直接私訊我ㄛ🙋🏻‍♀️🙋🏻‍♀️\n現貨5-7天寄出\n台灣製預購7-30天不包含假日 不能等請勿下單🈲\n外貿7-20天不等不包含假日\n目前疫情關係 外貿暫停到3月才結單\n也麻煩在群組講話不要酸溜溜！".format(str(group.name))
                     cl.sendMessage(op.param1,text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
                 except Exception as error:
                     print(error)
