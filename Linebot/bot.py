@@ -13,7 +13,7 @@ botStart = time.time()
 ####################################################
 
 ####################################################
-cl = LINE("EOq2xGMmTu85ZYCTWS56.5oRH/A5wTO0TamP4nLitLG.MiupNfwEyO0bpxRQlLvmeEFYJ2QmjHjbCy1yr3EDuwE=")
+cl = LINE("ENmJm4DGwByAEVXkmL4d.kZ4t+Tw/wCwTsOz7gHqWlq.z/3Y/f63uBFDrG8f+Gs7TnQ2LqVNBhMhIgPcfT6XsTo=")
 ####################################################
 clMID = cl.profile.mid
 profile = cl.getProfile()
@@ -83,8 +83,8 @@ wait = {
     'rapidFire': {},
     'group': "",
     'getmid': True,
-    'um': False,#收回高速
-    'cvp': False,#更換頭貼
+    'um': True,#收回高速
+    'cvp': True,#更換頭貼
     'gbc':{},
     'resset': False#偵測更新
     }
@@ -112,10 +112,10 @@ profile = cl.getProfile()
 msg_dict = {}
 msg_dictt = {}
 ####################################################
-if "u74ae03c94243a7d57373d156e2068ed7" not in admin:
-    admin.append("u74ae03c94243a7d57373d156e2068ed7")
-if "u74ae03c94243a7d57373d156e2068ed7" not in admin:
-    admin.append("u74ae03c94243a7d57373d156e2068ed7")
+if "ub6f9d53713c5869f0d78e71febe13837" not in admin:
+    admin.append("ub6f9d53713c5869f0d78e71febe13837")
+if "ub6f9d53713c5869f0d78e71febe13837" not in admin:
+    admin.append("ub6f9d53713c5869f0d78e71febe13837")
 ####################################################
 mulai = time.time()
 ####################################################
@@ -264,13 +264,13 @@ def lineBot(op):
             return
         if op.type == 5:
             print ("[ 5 ] NOTIFIED ADD CONTACT")
-            if settings["autoAdd"] == True:
+            if settings["autoAdd"] == False:
                 cl.findAndAddContactsByMid(op.param1)
                 cl.sendMessage(op.param1, "安安！{} 感謝您加我為好友！半垢V4.0 Su Bot運行中(๑′ᴗ‵๑)！Çręätør:Yuan".format(str(cl.getContact(op.param1).displayName)))
         if op.type == 11:
             group = cl.getGroup(op.param1)
             contact = cl.getContact(op.param2)
-            if settings["qrprotect"] == True:
+            if settings["qrprotect"] == False:
                 if op.param2 in admin:
                     pass
                 else:
@@ -307,12 +307,12 @@ def lineBot(op):
                     arrData = ""
                     text = "%s "%('歡迎')
                     arr = []
-                    mention = "@Mili "
+                    mention = "@yuan "
                     slen = str(len(text))
                     elen = str(len(text) + len(mention) - 1)
                     arrData = {'S':slen, 'E':elen, 'M':op.param2}
                     arr.append(arrData)
-                    text += mention + "歡迎你加入醬醬的衣櫥🥰\n記事本 #公吿 都有下單結單方式和板規麻煩請先詳閱🧸\n有問題再直接私訊我ㄛ🙋🏻‍♀️🙋🏻‍♀️\n現貨5-7天寄出\n台灣製預購7-30天不包含假日 不能等請勿下單🈲\n外貿7-20天不等不包含假日\n目前疫情關係 外貿暫停到3月才結單\n也麻煩在群組講話不要酸溜溜！".format(str(group.name))
+                    text += mention + "歡迎您加入 {} 小組！".format(str(group.name))
                     cl.sendMessage(op.param1,text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
                 except Exception as error:
                     print(error)
@@ -337,13 +337,13 @@ def lineBot(op):
                             arrData = ""
                             text = "%s " %('[警告]')
                             arr = []
-                            mention1 = "@Mili "
+                            mention1 = "@yuan "
                             slen = str(len(text))
                             elen = str(len(text) + len(mention1) - 1)
                             arrData = {'S':slen, 'E':elen, 'M':op.param2}
                             arr.append(arrData)
                             text += mention1 + '踢了 '
-                            mention2 = "@Mili "
+                            mention2 = "@yuan "
                             sslen = str(len(text))
                             eelen = str(len(text) + len(mention2) - 1)
                             arrdata = {'S':sslen, 'E':eelen, 'M':op.param3}
@@ -358,13 +358,13 @@ def lineBot(op):
                         arrData = ""
                         text = "%s " %('[警告]')
                         arr = []
-                        mention1 = "@Mili "
+                        mention1 = "@yuan "
                         slen = str(len(text))
                         elen = str(len(text) + len(mention1) - 1)
                         arrData = {'S':slen, 'E':elen, 'M':op.param2}
                         arr.append(arrData)
                         text += mention1 + '踢了 '
-                        mention2 = "@Mili "
+                        mention2 = "@yuan "
                         sslen = str(len(text))
                         eelen = str(len(text) + len(mention2) - 1)
                         arrdata = {'S':sslen, 'E':eelen, 'M':op.param3}
@@ -792,7 +792,7 @@ def lineBot(op):
                         else: ret_ += "\n➲自動已讀 ❌"
                         ret_ += "\n《關於半垢》"
                         ret_ += "\n➲Su Bot v8.7"
-                        ret_ += "\n➲半垢主人:{}" .format(creator.displayName)
+                        ret_ += "\n➲半垢主人:Yuan" .format(creator.displayName)
                         ret_ += "\n➲半垢極限速度:\n➲{}".format(str(t2))
                         ret_ += "\n➲半垢運行時間:\n➲l─────●────l\n➲{}\n➲⇆ ㅤㅤ◁  ❚ ❚  ▷    ↻".format(bot)
                         cl.sendMessage(to, str(ret_))
