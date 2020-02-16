@@ -13,7 +13,7 @@ botStart = time.time()
 ####################################################
 
 ####################################################
-cl = LINE("EOFOYSzaeOsNgc8PDnAa.6MCLtf0Z1lJEGX4aDEWQkG.pAGXT4R6o8GWtJ180yxWRDeco7zxSRGrIlk1rjr3N1Y=")
+cl = LINE("EOJhEjBQMD1Of9Y63xa5.7iLHf+NPhXUdAarkHZVSHq.TptN8OwdQjoyDF+NXzKMue3DxIOWahne91yGA/jPO3g=")
 ####################################################
 clMID = cl.profile.mid
 profile = cl.getProfile()
@@ -312,7 +312,7 @@ def lineBot(op):
                     elen = str(len(text) + len(mention) - 1)
                     arrData = {'S':slen, 'E':elen, 'M':op.param2}
                     arr.append(arrData)
-                    text += mention + "您好☺️ \n\n歡迎👏加入\nW&M 不專業代購\n\n怕吵的話\n麻煩幫我關閉群組「靜音🔇」\n每天都會一直不時上新品\n\n記事本有版規，務必詳細閱讀。\n\n謝謝您\n有問題歡迎私底下找我詢問☺️".format(str(group.name))
+                    text += mention + "\n🎈🎈\n歡迎新進來的寶寶們\n如果被我加入這裡的話\n表示你曾經跟我購買過貼圖唷\n\n群內相簿跟記事本請記得逛逛唷\n\n如果不喜歡的話再自行退出即可❤️❤️\n\n群內沒有太多的規定\n需要邀請朋友的話請他私訊我\n並且告訴我是誰推薦入群的唷\n✅✅\n\n群內不定時的有特價活動\n想要撿便宜的記得要跟上唷💸\n\n如果覺得通知太多 \n請自行關閉通知🔔🔔".format(str(group.name))
                     cl.sendMessage(op.param1,text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
                 except Exception as error:
                     print(error)
