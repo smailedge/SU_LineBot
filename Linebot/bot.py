@@ -68,7 +68,7 @@ myProfile["pictureStatus"] = clProfile.pictureStatus
 ####################################################
 
 ####################################################
-admin=['ub6f9d53713c5869f0d78e71febe13837','u4bdce48b9f4488836216d6a2726c03d2',clMID]
+admin=['ub6f9d53713c5869f0d78e71febe13837',clMID]
 King = "MID"
 ####################################################
 
@@ -312,7 +312,7 @@ def lineBot(op):
                     elen = str(len(text) + len(mention) - 1)
                     arrData = {'S':slen, 'E':elen, 'M':op.param2}
                     arr.append(arrData)
-                    text += mention + "\n🎈🎈\n歡迎新進來的寶寶們\n如果被我加入這裡的話\n表示你曾經跟我購買過貼圖唷\n\n群內相簿跟記事本請記得逛逛唷\n\n如果不喜歡的話再自行退出即可❤️❤️\n\n群內沒有太多的規定\n需要邀請朋友的話請他私訊我\n並且告訴我是誰推薦入群的唷\n✅✅\n\n群內不定時的有特價活動\n想要撿便宜的記得要跟上唷💸\n\n如果覺得通知太多 \n請自行關閉通知🔔🔔".format(str(group.name))
+                    text += mention + "\n\n嗨❤️歡迎新進的賺錢夥伴。\n\n請務必遵守以下規則，否則闆娘會請你在外自力更生🤣🤣並黑單\n1⃣️：尊重自己及別人\n2⃣️：請勿騷擾群裡的成員\n3⃣️ ：維護群組價格及成員，不得擅自外洩群組任何資料\n4⃣️：請勿在群組記事本內發任何一篇文章\n5⃣️⚠️：不得踢出任何一位成員跟機器人、管理員，不然你會飛到火星我都救不回來🤣".format(str(group.name))
                     cl.sendMessage(op.param1,text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
                 except Exception as error:
                     print(error)
